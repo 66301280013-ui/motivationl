@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>กำลังใจ</title>
+<style>
+  body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#222;color:#fff;font-family:sans-serif;text-align:center}
+  .card{background:#333;padding:30px 40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+  button{margin-top:20px;padding:10px 18px;border:none;border-radius:12px;background:#4CAF50;color:#fff;font-weight:bold;cursor:pointer}
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="msg">กดปุ่มเพื่อรับกำลังใจ 🌟</h1>
+    <button onclick="giveMotivation()">รับกำลังใจ</button>
+  </div>
+
+<script>
+  const messages = [
+    "ไอ้เหี้ย",
+    
+  ];
+  function giveMotivation(){
+    const msg = messages[Math.floor(Math.random()*messages.length)];
+    document.getElementById("msg").textContent = msg;
+  }
+</script>
+</body>
+</html>
